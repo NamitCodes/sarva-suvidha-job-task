@@ -70,3 +70,8 @@ flutter run
 * 🐘 Supabase pooler URL is used; ensure correct database permissions
 * 🌐 CORS is allowed from all origins (`*`) — should be restricted in production
 * ✅ Form field validations are basic/minimal
+
+---
+
+## Screen Recording / Demonstration
+* [Here](https://drive.google.com/file/d/1Gj7w8fNRLOnLmD8q0jrNqUDTNBJAk1XF/view)
