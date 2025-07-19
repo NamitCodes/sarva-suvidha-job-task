@@ -1,0 +1,16 @@
+# Python backend ignores
+/backend/.env
+/backend/.venv/
+/backend/__pycache__/
+
+# Flutter frontend ignores
+/KPA-ERP-FE/.dart_tool/
+/KPA-ERP-FE/.packages
+/KPA-ERP-FE/.flutter-plugins
+/KPA-ERP-FE/build/
+/KPA-ERP-FE/.idea/
+/KPA-ERP-FE/.vscode/
+
+# Global ignores
+.DS_Store
+Thumbs.db

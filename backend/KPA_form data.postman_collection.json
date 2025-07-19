@@ -1,0 +1,114 @@
+{
+  "info": {
+    "_postman_id": "665c1e5a-f451-4c2d-9fde-e70530373c29",
+    "name": "KPA_form data",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30281483"
+  },
+  "item": [
+    {
+      "name": "https://railops-uat-api.biputri.com/api/forms/wheel-specifications",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"formNumber\": \"WHEEL-2025-001\",\n  \"submittedBy\": \"user_id_123\",\n  \"submittedDate\": \"2025-07-03\",\n  \"fields\": {\n    \"treadDiameterNew\": \"915 (900-1000)\",\n    \"lastShopIssueSize\": \"837 (800-900)\",\n    \"condemningDia\": \"825 (800-900)\",\n    \"wheelGauge\": \"1600 (+2,-1)\",\n    \"variationSameAxle\": \"0.5\",\n    \"variationSameBogie\": \"5\",\n    \"variationSameCoach\": \"13\",\n    \"wheelProfile\": \"29.4 Flange Thickness\",\n    \"intermediateWWP\": \"20 TO 28\",\n    \"bearingSeatDiameter\": \"130.043 TO 130.068\",\n    \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\n    \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\n    \"rollerBearingWidth\": \"93 (+0/-0.250)\",\n    \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\n    \"wheelDiscWidth\": \"127 (+4/-0)\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://railops-uat-api.biputri.com/api/forms/wheel-specifications",
+          "protocol": "https",
+          "host": ["railops-uat-api", "biputri", "com"],
+          "path": ["api", "forms", "wheel-specifications"]
+        }
+      },
+      "response": [
+        {
+          "name": "201 Created",
+          "originalRequest": {},
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "body": "{\n  \"success\": true,\n  \"message\": \"Wheel specification submitted successfully.\",\n  \"data\": {\n    \"formNumber\": \"WHEEL-2025-001\",\n    \"submittedBy\": \"user_id_123\",\n    \"submittedDate\": \"2025-07-03\",\n    \"status\": \"Saved\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "https://railops-uat-api.biputri.com/api/forms/bogie-checksheet",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"formNumber\": \"BOGIE-2025-001\",\n  \"inspectionBy\": \"user_id_456\",\n  \"inspectionDate\": \"2025-07-03\",\n  \"bogieDetails\": {\n    \"bogieNo\": \"BG1234\",\n    \"makerYearBuilt\": \"RDSO/2018\",\n    \"incomingDivAndDate\": \"NR / 2025-06-25\",\n    \"deficitComponents\": \"None\",\n    \"dateOfIOH\": \"2025-07-01\"\n  },\n  \"bogieChecksheet\": {\n    \"bogieFrameCondition\": \"Good\",\n    \"bolster\": \"Good\",\n    \"bolsterSuspensionBracket\": \"Cracked\",\n    \"lowerSpringSeat\": \"Good\",\n    \"axleGuide\": \"Worn\"\n  },\n  \"bmbcChecksheet\": {\n    \"cylinderBody\": \"WORN OUT\",\n    \"pistonTrunnion\": \"GOOD\",\n    \"adjustingTube\": \"DAMAGED\",\n    \"plungerSpring\": \"GOOD\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://railops-uat-api.biputri.com/api/forms/bogie-checksheet",
+          "protocol": "https",
+          "host": ["railops-uat-api", "biputri", "com"],
+          "path": ["api", "forms", "bogie-checksheet"]
+        }
+      },
+      "response": [
+        {
+          "name": "201 Created",
+          "originalRequest": {},
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "body": "{\n  \"success\": true,\n  \"message\": \"Bogie checksheet submitted successfully.\",\n  \"data\": {\n    \"formNumber\": \"BOGIE-2025-001\",\n    \"inspectionBy\": \"user_id_456\",\n    \"inspectionDate\": \"2025-07-03\",\n    \"status\": \"Saved\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "https://railops-uat-api.biputri.com/api/forms/wheel-specifications (GET with filters)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://railops-uat-api.biputri.com/api/forms/wheel-specifications?formNumber=WHEEL-2025-001&submittedBy=user_id_123&submittedDate=2025-07-03",
+          "protocol": "https",
+          "host": ["railops-uat-api", "biputri", "com"],
+          "path": ["api", "forms", "wheel-specifications"],
+          "query": [
+            {
+              "key": "formNumber",
+              "value": "WHEEL-2025-001"
+            },
+            {
+              "key": "submittedBy",
+              "value": "user_id_123"
+            },
+            {
+              "key": "submittedDate",
+              "value": "2025-07-03"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "200 OK - Filtered Results",
+          "originalRequest": {},
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "body": "{\n  \"success\": true,\n  \"message\": \"Filtered wheel specification forms fetched successfully.\",\n  \"data\": [\n    {\n      \"formNumber\": \"WHEEL-2025-001\",\n      \"submittedBy\": \"user_id_123\",\n      \"submittedDate\": \"2025-07-03\",\n      \"fields\": {\n        \"treadDiameterNew\": \"915 (900-1000)\",\n        \"lastShopIssueSize\": \"837 (800-900)\",\n        \"condemningDia\": \"825 (800-900)\",\n        \"wheelGauge\": \"1600 (+2,-1)\"\n      }\n    }\n  ]\n}"
+        }
+      ]
+    }
+  ]
+}
