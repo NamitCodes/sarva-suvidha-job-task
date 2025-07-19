@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "f6082d19-ecf9-481a-a13e-382b208e3f57",
+		"name": "KPA-ERP API Namit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37899880"
+	},
+	"item": [
+		{
+			"name": "/api/forms/wheel-specifications",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formNumber\": \"WHEEL-2025-001\",\r\n  \"submittedBy\": \"user_id_123\",\r\n  \"submittedDate\": \"2025-07-03\",\r\n  \"fields\": {\r\n    \"treadDiameterNew\": \"915 (900-1000)\",\r\n    \"lastShopIssueSize\": \"837 (800-900)\",\r\n    \"condemningDia\": \"825 (800-900)\",\r\n    \"wheelGauge\": \"1600 (+2,-1)\",\r\n    \"variationSameAxle\": \"0.5\",\r\n    \"variationSameBogie\": \"5\",\r\n    \"variationSameCoach\": \"13\",\r\n    \"wheelProfile\": \"29.4 Flange Thickness\",\r\n    \"intermediateWWP\": \"20 TO 28\",\r\n    \"bearingSeatDiameter\": \"130.043 TO 130.068\",\r\n    \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\r\n    \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\r\n    \"rollerBearingWidth\": \"93 (+0/-0.250)\",\r\n    \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\r\n    \"wheelDiscWidth\": \"127 (+4/-0)\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/forms/wheel-specifications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"wheel-specifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/forms/wheel-specifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/forms/wheel-specifications?formNumber=WHEEL-2025-001&submittedBy=user_id_123&submittedDate=2025-07-03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"wheel-specifications"
+					],
+					"query": [
+						{
+							"key": "formNumber",
+							"value": "WHEEL-2025-001"
+						},
+						{
+							"key": "submittedBy",
+							"value": "user_id_123"
+						},
+						{
+							"key": "submittedDate",
+							"value": "2025-07-03"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phone\": \"7760873976\",\r\n  \"password\": \"to_share@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
