@@ -3,7 +3,7 @@
 ### Clone the Repository
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/NamitCodes/sarva-suvidha-job-task.git
 cd sarva-suvidha-job-apply
 ```
 
